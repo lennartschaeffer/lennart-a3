@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>My Skill-Set</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!--Font retrieved from-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-header">
+      <h3>Lennart Schaeffer</h3>
+      <nav>
+        <ul class="navbar">
+          <li><a href="/homepage/index.html">Home</a></li>
+          <li><a href="/about/about.html">About</a></li>
+          <li><a href="/contact/contact.html">Contact Me</a></li>
+          <li><a href="/skillset/skillset.html">Skill Set</a></li>
+          <li id="sidebarIcon" onclick="showSideBar()">
+            <img
+              src="../icons/menu.png"
+              alt=""
+              width="25"
+              onclick="showSideBar()"
+              id="menu"
+            />
+          </li>
+        </ul>
+        <ul class="sidebar">
+          <li><a href="../homepage/index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../skillset/skillset.html">Projects</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li>
+            <img
+              src="../icons/exit.png"
+              alt=""
+              width="30"
+              onclick="removeSideBar()"
+              id="exit"
+            />
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main-content-header">
+      <h2>My Projects</h2>
+      <div class="main-content">
+        <div class="grid-container">
+          <div class="pokemon-project">
+            <img
+              src="pokemonjs.png"
+              alt="screenshot of pokemon project by Lennart Schaeffer"
+            />
+            <h3>Pokemon Card Generator</h3>
+          </div>
+          <div class="photos-project">
+            <img
+              src="photos.png"
+              alt="screenshot of photo layout project by Lennart Schaeffer"
+            />
+            <h3>Photo Website for My Grandma</h3>
+          </div>
+          <div class="workout-tracker">
+            <img
+              src="workoutjs.png"
+              alt="screenshot of workout tracker project by Lennart Schaeffer"
+            />
+            <h3>Workout Tracker</h3>
+          </div>
+          <div class="pickleball-project">
+            <img
+              src="pickleball-project.png"
+              alt="screenshot of Pickleball Team generator project by Lennart Schaeffer"
+            />
+            <h3>Pickleball Random Team Generator</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../index.js"></script>
+  </body>
+</html>

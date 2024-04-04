@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!--Font retrieved from-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-header">
+      <h3>Lennart Schaeffer</h3>
+      <nav>
+        <ul class="navbar">
+          <li><a href="../homepage/index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../contact/contact.html">Contact Me</a></li>
+          <li><a href="../skillset/skillset.html">Skill Set</a></li>
+          <li id="sidebarIcon" onclick="showSideBar()">
+            <img
+              src="../icons/menu.png"
+              alt=""
+              width="25"
+              onclick="showSideBar()"
+              id="menu"
+            />
+          </li>
+        </ul>
+        <ul class="sidebar">
+          <li><a href="../homepage/index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../contact/contact.html">Contact Me</a></li>
+          <li><a href="../skillset/skillset.html">Skill Set</a></li>
+          <li>
+            <img
+              src="../icons/exit.png"
+              alt=""
+              width="30"
+              onclick="removeSideBar()"
+              id="exit"
+            />
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main-header"><h1>Contact Me</h1></div>
+    <div class="form-container">
+      <form action="" id="contact-form">
+        <div class="firstNameContainer">
+          <label for="firstName">First Name:&nbsp;</label>
+          <input type="text" id="firstName" />
+        </div>
+        <div class="lastNameContainer">
+          <label for="lastName">Last Name:&nbsp;</label>
+          <input type="text" id="lastName" />
+        </div>
+        <div class="phoneNumberContainer">
+          <label for="phoneNumber">Phone #: &nbsp;</label>
+          <input type="tel" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
+        </div>
+        <div class="emailContainer">
+          <label for="email">Email:&nbsp;</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="dateContainer">
+          <label for="date">Date:&nbsp;</label>
+          <input type="date" id="date" />
+        </div>
+        <label for="messageInput" id="messageLabel"
+          >Additional Info / Message:</label
+        >
+        <textarea name="" id="messageInput" cols="20" rows="5"></textarea>
+        <div class="submitButtonContainer">
+          <input type="submit" id="submitButton" />
+        </div>
+        <div class="errorMessage">This is the error message</div>
+      </form>
+    </div>
+    <script src="./contact.js"></script>
+  </body>
+</html>

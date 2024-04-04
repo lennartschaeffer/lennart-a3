@@ -1,0 +1,125 @@
+body{
+    width: 100%;
+    background-color: black;
+    font-family: 'DM Sans';
+    color: white;
+    margin: 0;
+}
+.page-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+    float: right;
+    gap: 25px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover{
+    color: rgb(149, 155, 189);
+}
+.sidebar{
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgb(149, 155, 189);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 150px 0px 10px;
+    margin-top: 0;
+}
+.sidebar li{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.sidebar a{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#menu{
+    display: none;
+    margin-right: 5px;
+}
+#menu:hover, #exit:hover{
+    cursor: pointer;
+}
+.main-content-header{
+    margin-top: 80px;
+    text-align: center;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+}
+.grid-container {
+    margin-top: 30px;
+    display: grid;
+    border: 1px solid black;
+    row-gap: 80px;
+    column-gap: 20px;
+    grid-template-rows: 250px 300px;
+    grid-template-columns: 240px 300px 270px;
+    grid-template-areas:
+      "pokemon photos workout"
+      "pickleball pickleball pickleball";
+  }
+.pokemon-project{
+    grid-area: pokemon;
+    
+}
+.photos-project{
+    grid-area: photos;
+}
+.photos-project img{
+    width: 100%;
+}
+.workout-tracker{
+    grid-area: workout;
+}
+.pickleball-project{
+    grid-area: pickleball;
+}
+.grid-container img{
+    height: 90%;
+    border-radius: 20px;
+}
+.grid-container img:hover{
+    height: 100%;
+    box-shadow: 2px 2px 20px 5px rgb(149, 155, 189);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px){
+    .navbar li a{
+        display: none;
+    }
+    #menu{
+        display: flex;
+    }
+    #sidebarIcon{
+        display: flex;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-container img{
+        width: 250px;
+        height: 250px;
+    }
+}

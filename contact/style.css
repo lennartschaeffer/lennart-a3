@@ -1,0 +1,139 @@
+body{
+    width: 100%;
+    background-color: black;
+    font-family: 'DM Sans';
+    color: white;
+    height: 100vh;
+}
+.page-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+    float: right;
+    gap: 25px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover{
+    color: rgb(149, 155, 189);
+}
+.sidebar{
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgb(149, 155, 189);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 150px 0px 10px;
+    margin-top: 0;
+}
+.sidebar li{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.sidebar a{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#menu{
+    display: none;
+    margin-right: 5px;
+}
+#menu:hover, #exit:hover{
+    cursor: pointer;
+}
+.main-header{
+    text-align: center;
+}
+.info-table{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.info-table ~ p{
+    text-align: center;
+}
+.info-table p{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.contact{
+    color: rgb(149, 155, 189);
+}
+.info-table + ol{
+    list-style: none;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    align-items: center;
+}
+#contact-form{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+#messageLabel{
+    text-align: center;
+}
+#submitButton{
+    margin-top: 10px;
+    font-family: 'DM Sans';
+    background-color: rgb(149, 155, 189);
+    border-radius: 50px;
+    padding: 10px;
+}
+#submitButton:hover{
+    cursor: pointer;
+    background-color: rgb(169, 173, 194);
+}
+.submitButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+.errorMessage{
+    color: black;
+    display: none;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+}
+.firstNameContainer, .lastNameContainer, .phoneNumberContainer, .emailContainer,.dateContainer{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px){
+    
+    .navbar li a{
+        display: none;
+    }
+    #menu{
+        display: flex;
+    }
+    #sidebarIcon{
+        display: flex;
+    }
+
+}

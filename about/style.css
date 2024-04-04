@@ -1,0 +1,132 @@
+body{
+    width: 100%;
+    background-color: black;
+    font-family: 'DM Sans';
+    color: white;
+    height: 100vh;
+    margin: 0;
+}
+.page-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+    float: right;
+    gap: 25px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover{
+    color: rgb(149, 155, 189);
+}
+.sidebar{
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgb(149, 155, 189);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 150px 0px 10px;
+    margin-top: 0;
+}
+.sidebar li{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.sidebar a{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#menu{
+    display: none;
+    margin-right: 5px;
+}
+#menu:hover, #exit:hover{
+    cursor: pointer;
+}
+.main-content{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: 475px 5px 475;
+    row-gap: 20px;
+}
+.about-me-header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 80px;
+    text-align: center;
+    color: rgb(149, 155, 189);
+}
+.line{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(149, 155, 189);
+    color: rgb(149, 155, 189);
+    font-size: 1px;
+}
+.written-info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+}
+.written-info > p{
+    text-align: center;
+}
+.future-jobs{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.scuba-img{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    filter: grayscale(100%);
+}
+@media (max-width: 768px){
+    .navbar li a{
+        display: none;
+    }
+    #menu{
+        display: flex;
+    }
+    #sidebarIcon{
+        display: flex;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .written-info{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .written-info p{
+        width: 90%;
+    }
+    
+}
